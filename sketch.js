@@ -1,9 +1,9 @@
-let a = 200;
+let a = 500;
 let correct = 0.0;
 let total = 0.0;
 
 function setup() {
-    createCanvas(a+2, a+10);
+    createCanvas(a+2, a+(a/10));
     background('gray');
     push();
     stroke(0);
@@ -43,8 +43,9 @@ function draw() {
 
     stroke(0);
     fill(0);
-    rect(0,a,a,10)
+    rect(0,a,a,a+100)
     fill(255);        
     let pi = 4* (correct/total);
-    text("PI = " + pi ,0,a+10);
+	textSize(a/10);
+    text("PI = " + pi ,0,a +(a/11));
 }
